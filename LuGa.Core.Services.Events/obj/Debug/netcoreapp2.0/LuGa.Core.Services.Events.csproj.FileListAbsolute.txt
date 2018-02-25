@@ -1,0 +1,7 @@
+C:\Workspace\LuGa.Core.Services.Events\LuGa.Core.Services.Events\bin\Debug\netcoreapp2.0\LuGa.Core.Services.Events.deps.json
+C:\Workspace\LuGa.Core.Services.Events\LuGa.Core.Services.Events\bin\Debug\netcoreapp2.0\LuGa.Core.Services.Events.runtimeconfig.json
+C:\Workspace\LuGa.Core.Services.Events\LuGa.Core.Services.Events\bin\Debug\netcoreapp2.0\LuGa.Core.Services.Events.runtimeconfig.dev.json
+C:\Workspace\LuGa.Core.Services.Events\LuGa.Core.Services.Events\bin\Debug\netcoreapp2.0\LuGa.Core.Services.Events.dll
+C:\Workspace\LuGa.Core.Services.Events\LuGa.Core.Services.Events\obj\Debug\netcoreapp2.0\LuGa.Core.Services.Events.csproj.CoreCompileInputs.cache
+C:\Workspace\LuGa.Core.Services.Events\LuGa.Core.Services.Events\obj\Debug\netcoreapp2.0\LuGa.Core.Services.Events.AssemblyInfoInputs.cache
+C:\Workspace\LuGa.Core.Services.Events\LuGa.Core.Services.Events\obj\Debug\netcoreapp2.0\LuGa.Core.Services.Events.AssemblyInfo.cs
