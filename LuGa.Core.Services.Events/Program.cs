@@ -2,13 +2,15 @@
 using System.Diagnostics;
 using System.IO;
 using System.Text;
+using LuGa.Core.Repository;
 using Microsoft.Extensions.Configuration;
+using Topshelf;
 
 namespace LuGa.Core.Services.Events
 {
     class Program
     {
-        static void Main(string[] args)
+        static int Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
 
@@ -35,6 +37,24 @@ namespace LuGa.Core.Services.Events
             }
 
             var cfg = builder.Build();
+            
+            return (int)HostFactory.Run(x =>
+            {
+                var mqttConfig = new LuGaMqttConfig
+                (
+                    cfg[Constants.Username],
+                    cfg[Constants.Password],
+                    cfg[Constants.ClientId],
+                    cfg[Constants.Host],
+                    Convert.ToInt32(cfg[Constants.Port]));
+                
+                var eventsRepository = new EventsRepository(cfg[Constants.ConnectionString]);
+
+                x.Service(y => new LuGaMqtt(mqttConfig, eventsRepository));
+
+                x.SetServiceName(Constants.ServiceName);
+                x.SetDisplayName(Constants.ServiceName);
+            });
         }
     }
 }
