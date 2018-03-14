@@ -15,7 +15,7 @@ We are using two stage build with separate image for building and separate runti
 
 # How to run this docker image #
 
-`docker run luga/events:latest  -e "mqtt__password"="password" -e "mqtt__username"="events" -e "mqtt__port"=1883 -e "mqtt__host"="mqtt.luga.online" -e "mqtt__clientid"="events" -e "ConnectionString__LuGa"="server=mysql;persistsecurityinfo=True;user id=root;password=example;database=luga"`
+`docker run luga/events:latest  -e "mqtt__password"="password" -e "mqtt__username"="events" -e "mqtt__port"=1883 -e "mqtt__host"="mqtt.luga.online" -e "mqtt__clientid"="events" -e "ConnectionStrings__LuGa"="server=mysql;persistsecurityinfo=True;user id=root;password=example;database=luga"`
 
 # How to publish docker image #
 
@@ -27,4 +27,4 @@ We are using two stage build with separate image for building and separate runti
 
 This only applies to our external docker setup
 
-`docker run -d --restart always -e mqtt__password="password" -e mqtt__username="events" -e mqtt__port="1883" -e mqtt__host="mqtt.luga.online" -e mqtt__clientid="events" -e ConnectionString__LuGa="connectionString" luga/events:latest`
+`docker run -d --restart always -e mqtt__password="password" -e mqtt__username="events" -e mqtt__port="1883" -e mqtt__host="mqtt.luga.online" -e mqtt__clientid="events" -e ConnectionStrings__LuGa="connectionString" luga/events:latest`
