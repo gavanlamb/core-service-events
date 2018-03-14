@@ -12,7 +12,7 @@
         
         public const string ServiceName = "luga-events";
 
-        public const string ConnectionString = "connectionString";
+        public const string ConnectionString = "LuGa";
 
         public const int ReconnectDelay = 5;
         

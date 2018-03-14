@@ -37,6 +37,8 @@ namespace LuGa.Core.Services.Events
             }
 
             var cfg = builder.Build();
+
+            var connectionString = cfg.GetConnectionString(Constants.ConnectionString);
             
             return (int)HostFactory.Run(x =>
             {
@@ -48,7 +50,7 @@ namespace LuGa.Core.Services.Events
                     cfg[Constants.Host],
                     Convert.ToInt32(cfg[Constants.Port]));
                 
-                var eventsRepository = new EventsRepository(cfg[Constants.ConnectionString]);
+                var eventsRepository = new EventsRepository(connectionString);
 
                 x.Service(y => new LuGaMqtt(mqttConfig, eventsRepository));
 
